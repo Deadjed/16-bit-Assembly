@@ -3,7 +3,7 @@
 ## Fill
 changes the screen to black when a key is pressed ('b' key) and return to white when no key is pressed. For my implementation I started by calculating how many 16 bit iterations I will need to print to fill the screen. 
 The hack computer this was written for has a screen size of 512 x 256, to calculate the iterations I will need to divide the width (256) by 16 (as our machine is 16 bit and will be changing 16 of those bits each iteration) and then multiply that value by our height. I have implemented this in my assembly code to avoid having to re calculate things if our screen size changes (I also added a rounding function at the end of the division function to avoid touching memory we shouldn’t be):
-```nasm
+```
 @256    // Set height to 256
 D=A
 @height 
@@ -137,7 +137,7 @@ Return SUM;
 ```
 
 My assembly implementation looks like this:
-```asm
+```
 @SUM    // Initialize sum variable to 0
 M=0
 
